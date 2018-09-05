@@ -13,23 +13,9 @@ const Title = styled.h2`
   font-size: 2rem;
 `;
 
-const Rated = styled.p`
+const Info = styled.p`
   font-size: 1.6rem;
 `;
-
-const Runtime = Rated.extend``;
-
-const Released = Runtime.extend``;
-
-const Plot = Released.extend``;
-
-const Genre = Plot.extend``;
-
-const Director = Genre.extend``;
-
-const Actors = Director.extend``;
-
-const Writer = Actors.extend``;
 
 export default ({
   Title: title,
@@ -50,14 +36,19 @@ export default ({
 }) => (
   <div>
     <ImgContainer src={poster} alt={`${title} poster`} />
-    <Title>{title}</Title>
-    <Rated>Rated: {rated}</Rated>
-    <Runtime>Runtime: {runtime}</Runtime>
-    <Released>Released: {released}</Released>
-    <Director>Director: {director}</Director>
-    <Actors>Cast: {actors}</Actors>
-    <Writer>Writer: {writer}</Writer>
-    <Genre>Genre: {genre}</Genre>
-    <Plot>{plot}</Plot>
+    <Info>{title}</Info>
+    <Info>Rated: {rated}</Info>
+    <Info>Runtime: {runtime}</Info>
+    <Info>Released: {released}</Info>
+    <Info>Director: {director}</Info>
+    <Info>Cast: {actors}</Info>
+    <Info>Writer: {writer}</Info>
+    <Info>Genre: {genre}</Info>
+    <Info>Awards: {awards}</Info>
+    <Info>Metascore: {metascore}</Info>
+    <Info>Rating: {rating}</Info>
+    <Info>Votes: {votes}</Info>
+    <Info>Price: {price}</Info>
+    <Info>{plot}</Info>
   </div>
 );
